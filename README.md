@@ -6,4 +6,6 @@
 
 ![Gameplay 1](screen.png)
 
+![Gameplay 2](screen2.png)
+
 2D game by Godot
