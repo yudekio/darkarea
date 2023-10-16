@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlvd4eba7ujt8"]
+
+[ext_resource type="Texture2D" uid="uid://cb63qcayqgyjs" path="res://graphics/ui/progress_bar/bg.png" id="1_wxcri"]
+[ext_resource type="Texture2D" uid="uid://cxw7ehu7mnljf" path="res://graphics/ui/progress_bar/over.png" id="2_n0nf7"]
+[ext_resource type="Texture2D" uid="uid://ddlbwdc532tr2" path="res://graphics/ui/progress_bar/progress.png" id="3_b1yig"]
+
+[node name="HPBar" type="TextureProgressBar"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1065.0
+offset_bottom = -666.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_under = ExtResource("1_wxcri")
+texture_over = ExtResource("2_n0nf7")
+texture_progress = ExtResource("3_b1yig")

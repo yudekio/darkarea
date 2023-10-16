@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://cw2rxnhwnx7sc"]
+
+[ext_resource type="Script" path="res://scenes/house.gd" id="1_vi8n5"]
+[ext_resource type="TileSet" uid="uid://b4dudoak4e5hp" path="res://scenes/levels/house.tres" id="2_2vedh"]
+[ext_resource type="PackedScene" uid="uid://4r6fl3e4kgim" path="res://scenes/objects/simple_light.tscn" id="2_j7hwb"]
+[ext_resource type="PackedScene" uid="uid://c68bn7cv2hp5l" path="res://scenes/objects/wall_light.tscn" id="3_penp5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bgerd"]
+size = Vector2(4041, 2474)
+
+[node name="House" type="Area2D"]
+collision_layer = 16
+script = ExtResource("1_vi8n5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(579.5, 197)
+shape = SubResource("RectangleShape2D_bgerd")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("2_2vedh")
+format = 2
+layer_0/name = "Floor"
+layer_0/tile_data = PackedInt32Array(-2, 65536, 1, -1, 65536, 1, -65536, 65536, 1, -65535, 65536, 1, -65534, 65536, 1, -65533, 65536, 1, -65532, 65536, 1, 4, 65536, 1, 3, 65536, 1, 2, 65536, 1, 1, 65536, 1, 0, 65536, 1, 65535, 65536, 1, 65534, 65536, 1, 131070, 65536, 1, 131071, 65536, 1, 65536, 65536, 1, 65537, 65536, 1, 65538, 65536, 1, 65539, 65536, 1, 65540, 65536, 1, -65539, 65536, 1, -3, 65536, 1, 65533, 65536, 1, 131069, 65536, 1, 196605, 65536, 1, 196606, 65536, 1, 196607, 65536, 1, 131072, 65536, 1, 131073, 65536, 1, 131074, 65536, 1, 131075, 65536, 1, 131076, 65536, 1, 131077, 65536, 1, 65541, 65536, 1, 5, 65536, 1, -65531, 65536, 1, -131068, 65536, 1, -131067, 65536, 1, -131069, 65536, 1, -131070, 65536, 1, -131071, 65536, 1, -131072, 65536, 1, -65537, 65536, 1, -65538, 65536, 1, 196611, 65536, 2, 196610, 65536, 2, 196609, 65536, 2, 196608, 65536, 2, 262143, 65536, 2, 262142, 65536, 2, 262141, 65536, 2, 262140, 0, 2, 196604, 0, 1, 131068, 0, 1, 65532, 0, 1, -4, 0, 1, -65540, 0, 1, -131076, 0, 0, -131074, 65536, 0, -131075, 65536, 0, -131073, 65536, 0, -196608, 65536, 0, -196607, 65536, 0, -196606, 65536, 0, -196605, 65536, 0, -196604, 65536, 0, -196603, 65536, 0, -196602, 131072, 0, -65530, 131072, 1, -131066, 131072, 1, 6, 131072, 1, 65542, 131072, 1, 131078, 131072, 1, 196614, 131072, 2, 196612, 131072, 4, 196613, 131072, 4)
+layer_1/name = "OuterWalls"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array(196614, 327680, 2, 131078, 327680, 1, 65542, 327680, 1, 6, 327680, 1, -65530, 327680, 1, -131066, 327680, 1, -196602, 327680, 0, -196604, 262144, 0, -196605, 262144, 0, -196606, 262144, 0, -196607, 262144, 0, -196608, 262144, 0, -131073, 262144, 0, -131074, 262144, 0, -131075, 262144, 0, -196603, 262144, 0, -131076, 196608, 0, -65540, 196608, 1, -4, 196608, 1, 65532, 196608, 1, 131068, 196608, 1, 196604, 196608, 1, 262140, 196608, 2, 262141, 262144, 2, 262142, 262144, 2, 262143, 262144, 2, 196608, 262144, 2, 196609, 262144, 2, 196610, 262144, 2, 196611, 262144, 2)
+layer_2/name = "InnerWalls"
+layer_2/enabled = true
+layer_2/modulate = Color(1, 1, 1, 1)
+layer_2/y_sort_enabled = false
+layer_2/y_sort_origin = 0
+layer_2/z_index = 0
+layer_2/tile_data = PackedInt32Array(196611, 327680, 8, 131075, 65536, 6, 65539, 65536, 7, 65538, 0, 6, 65537, 0, 6, 65536, 0, 6, 131071, 0, 6, 131070, 0, 6, 131068, 262144, 7)
+
+[node name="SimpleLight" parent="." instance=ExtResource("2_j7hwb")]
+position = Vector2(2462, -134)
+rotation = 1.5708
+
+[node name="SimpleLight2" parent="." instance=ExtResource("2_j7hwb")]
+position = Vector2(-619, 607)
+
+[node name="WallLight" parent="." instance=ExtResource("3_penp5")]
+position = Vector2(2402, 698)
+rotation = -1.5708
+metadata/_edit_lock_ = true
+
+[node name="WallLight4" parent="." instance=ExtResource("3_penp5")]
+position = Vector2(-1244, -42)
+rotation = 1.5708
+
+[node name="WallLight5" parent="." instance=ExtResource("3_penp5")]
+position = Vector2(-136, -866)
+rotation = 3.14159
+
+[node name="WallLight6" parent="." instance=ExtResource("3_penp5")]
+position = Vector2(1368, -866)
+rotation = 3.14159
+
+[node name="WallLight2" parent="." instance=ExtResource("3_penp5")]
+position = Vector2(1313, 927)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+
+[node name="WallLight3" parent="." instance=ExtResource("3_penp5")]
+position = Vector2(-1267, 946)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
